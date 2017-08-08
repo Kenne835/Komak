@@ -1,9 +1,9 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAudio']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
-  console.log('myApp -- config')
+  console.log('myApp -- config');
   $routeProvider
     .when('/home', {
       templateUrl: '/views/templates/home.html',
@@ -25,6 +25,60 @@ myApp.config(function($routeProvider, $locationProvider) {
     .when('/info', {
       templateUrl: '/views/templates/info.html',
       controller: 'InfoController',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+    .when('/overview', {
+      templateUrl: '/views/templates/overview.html',
+      controller: 'OverviewController as oc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+    .when('/extremities', {
+      templateUrl: '/views/templates/extremities.html',
+      controller: 'OverviewController as oc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+    .when('/body', {
+      templateUrl: '/views/templates/body.html',
+      controller: 'OverviewController as oc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+    .when('/extremityArea', {
+      templateUrl: '/views/templates/extremityArea.html',
+      controller: 'OverviewController as oc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+    .when('/comorbidities', {
+      templateUrl: '/views/templates/comorbidities.html',
+      controller: 'OverviewController as oc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+    .when('/doctorView', {
+      templateUrl: '/views/templates/doctorView.html',
+      controller: 'OverviewController as oc',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();
