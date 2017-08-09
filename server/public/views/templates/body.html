@@ -1,10 +1,45 @@
 <div ng-include="'views/partials/nav.html'"></div>
+<div ng-if="oc.intake.bodypart == 'arm'"> <!-- if something in the service is equal to "arm" -->
 
-<div class="head">
+  <center><p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+
+  <p><img ng-src="images/Arm.png" height="300"/></p>
+    <button ng-audio="soundclips/Burn.m4a">لاس </button>
+    <input type="radio" name="arm" ng-model="oc.intake.limb" value="upperArm"> .۱<br>
+    <button ng-audio="soundclips/Burn.m4a">سانګاله</button>
+    <input type="radio" name="arm" ng-model="oc.intake.limb" value="elbow"> .۲<br>
+    <button ng-audio="soundclips/Burn.m4a">فورارم </button>
+    <input type="radio" name="arm" ng-model="oc.intake.limb" value="forearm"> .۳<br>
+    <button ng-audio="soundclips/Burn.m4a">لاس</button>
+    <input type="radio" name="arm" ng-model="oc.intake.limb" value="hand"> .۴<br>
+    <p><button ng-click="oc.extremityClick()">راتلونکی</a></button></p>
+
+  </center>
+</div>
+
+<div ng-if="oc.intake.bodypart == 'leg'">
+
+  <center><p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+
+  <p><img ng-src="images/Leg.png" height="300"/></p>
+    <button ng-audio="soundclips/Burn.m4a">پاتون </button>
+    <input type="radio" name="leg" ng-model="oc.intake.limb" value="thigh"> .۱<br>
+    <button ng-audio="soundclips/Burn.m4a">زنګون </button>
+    <input type="radio" name="leg" ng-model="oc.intake.limb" value="knee"> .۲<br>
+    <button ng-audio="soundclips/Burn.m4a">ناراخ پښه </button>
+    <input type="radio" name="leg" ng-model="oc.intake.limb" value="shin"> .۳<br>
+    <button ng-audio="soundclips/Burn.m4a">پښه </button>
+    <input type="radio" name="leg" ng-model="oc.intake.limb" value="foot"> .۴<br>
+    <p><button ng-click="oc.extremityClick()">راتلونکی</a></button></p>
+
+  </center>
+</div>
+
+<div ng-if="oc.intake.bodypart == 'head'">
 
 <center><p><img ng-src="images/Head.png" height="300"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
+<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
 
 <button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
 <input type="checkbox" name="head" value="aching-pain"><br>
@@ -24,17 +59,17 @@
 <input type="checkbox" name="head" value="lack-of-vision"><br>
 <button ng-audio="soundclips/Head Trauma.m4a">پرهار </button>
 <input type="checkbox" name="head" value="head-trauma"><br>
-<input type="submit" value="Submit">
+<p><button><a href="#/overview">زیاتر </a></button></p>
+<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
 
 </center>
-
 </div>
 
-<div class="chest">
+<div ng-if="oc.intake.bodypart == 'chest'">
 
 <center><p><img ng-src="images/Torso.png" height="300"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
+<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
 
 <button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
 <input type="checkbox" name="chest" value="aching-pain"><br>
@@ -50,17 +85,17 @@
 <input type="checkbox" name="chest" value="breathless"><br>
 <button ng-audio="soundclips/Heart Palpitations.m4a">رېږده </button>
 <input type="checkbox" name="chest" value="palpitations"><br>
-<input type="submit" value="Submit">
+<p><button><a href="#/overview">زیاتر </a></button></p>
+<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
 
 </center>
-
 </div>
 
-<div class="abdomen">
+<div ng-if="oc.intake.bodypart == 'abdomen'">
 
 <center><p><img ng-src="images/Torso.png" height="300"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
+<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
 
 <button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
 <input type="checkbox" name="abdomen" value="aching-pain"><br>
@@ -74,17 +109,17 @@
 <input type="checkbox" name="abdomen" value="burn"><br>
 <button ng-audio="soundclips/Incontinence.m4a">بد لمني </button>
 <input type="checkbox" name="abdomen" value="incontinence"><br>
-<input type="submit" value="Submit">
+<p><button><a href="#/overview">زیاتر </a></button></p>
+<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
 
 </center>
-
 </div>
 
-<div class="back">
+<div ng-if="oc.intake.bodypart == 'back'">
 
 <center><p><img ng-src="images/back.png" height="300"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
+<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
 
 <button ng-audio="soundclips/Radiating Pain.m4a">پراخول </button>
 <input type="checkbox" name="back" value="radiating-pain"><br>
@@ -98,7 +133,8 @@
 <input type="checkbox" name="back" value="laceration"><br>
 <button ng-audio="soundclips/Burn.m4a">لمېسل </button>
 <input type="checkbox" name="back" value="burn"><br>
-<input type="submit" value="Submit">
+<p><button><a href="#/overview">زیاتر </a></button></p>
+<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
 
 </center>
 </div>

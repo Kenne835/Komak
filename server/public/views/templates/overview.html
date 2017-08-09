@@ -2,24 +2,19 @@
 <div class="container">
   <center><p><img ng-src="images/Human Body.png" height="400"/></p>
 
-    <p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
+    <p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
 
     <button ng-audio="soundclips/Burn.m4a">ښي لاس </button>
-    <input type="radio" name="body" value="leftArm"> .۱<br>
-    <button ng-audio="soundclips/Burn.m4a">پاتې لاس</button>
-    <input type="radio" name="body" value="rightArm"> .۲<br>
+    <input id="arm" type="radio" name="body" ng-model="oc.intake.bodypart" value="arm"> .۱<br>
     <button ng-audio="soundclips/Burn.m4a">ښي پښه </button>
-    <input type="radio" name="body" value="rightLeg" checked> .۳<br>
-    <button ng-audio="soundclips/Burn.m4a">پاتې پښه </button>
-    <input type="radio" name="body" value="leftLeg"> .۴<br>
+    <input id="leg" type="radio" name="body" ng-model="oc.intake.bodypart" value="leg"> .۳<br>
     <button ng-audio="soundclips/Burn.m4a">ټټر </button>
-    <input type="radio" name="body" value="chest"> .۵<br>
+    <input id="chest" type="radio" name="body" ng-model="oc.intake.bodypart" value="chest"> .۵<br>
     <button ng-audio="soundclips/Burn.m4a">سر</button>
-    <input type="radio" name="body" value="head"> .۶<br>
+    <input id="head" type="radio" name="body" ng-model="oc.intake.bodypart" value="head"> .۶<br>
     <button ng-audio="soundclips/Burn.m4a">نس </button>
-    <input type="radio" name="body" value="abdomen"> .۷<br>
+    <input id="abdomen" type="radio" name="body" ng-model="oc.intake.bodypart" value="abdomen"> .۷<br>
     <button ng-audio="soundclips/Burn.m4a">مله </button>
-    <input type="radio" name="body" value="back"> .۸<br>
-    <p><input type="submit" value="Submit"></center></p>
-
+    <input id=" back" type="radio" name="body" ng-model="oc.intake.bodypart" value="back"> .۸<br>
+    <p><button ng-click="oc.bodyClick()">راتلونکی</button></p>
   </div>

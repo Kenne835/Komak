@@ -58,15 +58,6 @@ myApp.config(function($routeProvider, $locationProvider) {
         }
       }
     })
-    .when('/extremityArea', {
-      templateUrl: '/views/templates/extremityArea.html',
-      controller: 'OverviewController as oc',
-      resolve: {
-        getuser : function(UserService){
-          return UserService.getuser();
-        }
-      }
-    })
     .when('/comorbidities', {
       templateUrl: '/views/templates/comorbidities.html',
       controller: 'OverviewController as oc',
