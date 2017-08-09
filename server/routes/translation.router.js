@@ -22,10 +22,7 @@ router.get('/', function(req, res){
       console.log('Error connecting to the database.');
       res.sendStatus(500);
     } else {
-      // We connected to the database!!!
-      // Now we're going to GET things from the db
       var queryText = 'SELECT * FROM "translations";';
-      // errorMakingQuery is a bool, result is an object
       db.query(queryText, function(errorMakingQuery, result){
         done();
         if(errorMakingQuery) {
@@ -36,7 +33,6 @@ router.get('/', function(req, res){
           // console.log(result);
           // Send back the results
           res.send({translations: result.rows});
-          console.log(translations);
         }
       }); // end query
     } // end if

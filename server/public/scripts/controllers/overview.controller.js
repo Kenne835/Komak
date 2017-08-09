@@ -1,8 +1,10 @@
-myApp.controller('OverviewController', function(UserService, IntakeService, $location, ngAudio) {
+myApp.controller('OverviewController', function(UserService, IntakeService, $location, $http, ngAudio) {
   console.log('OverviewController created');
   var vm = this;
   vm.userService = UserService;
   vm.intake = IntakeService.intake;
+
+  getTranslations();
 
   vm.bodyClick = function() {
     console.log('onclick function');
@@ -34,13 +36,12 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
    $location.path('/doctorView');
   };
 
-  vm.getTranslations = function() {
+function getTranslations(){
   console.log('in getTranslations');
   $http.get('/translations').then(function(response){
     console.log('get response:', response);
-    lc.translations = response.data;
+    vm.translations = response.data;
   });
-};
-
+}
 
 });
