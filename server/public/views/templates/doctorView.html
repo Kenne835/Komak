@@ -4,8 +4,10 @@
 
 <p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
 
-<div ng-repeat="item in oc.translations">
-  <p class="translation"> {{oc.translations.translations}} </p>
+<!-- <p>first part of the array{{oc.postedBodyPartArray}}</p> -->
+
+<div>
+  <p ng-repeat="ted in oc.postedBodyPartArray">{{ted.translation}}</p>
 </div>
 
 <p><button ng-click="oc.overviewClick()">New Form</a></button></p>

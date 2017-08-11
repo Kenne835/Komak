@@ -4,16 +4,10 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
   vm.userService = UserService;
   vm.intake = IntakeService.intake;
 
-
   vm.bodyClick = function() {
     console.log('onclick function');
-    console.log(vm.intake);
     //save the selection in service before navigation
-    $http.post('/translations', vm.intake)
-    .then(function(response) {
-      console.log('selected value', response);
       $location.path('/body');
-    });
   };
 
   vm.extremityClick = function() {
@@ -37,20 +31,16 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
   vm.doctorViewClick = function() {
     console.log('onclick function');
     //save the selection in service before navigation
+    $http.post('/translations', vm.intake)
+    .then(function(response) {
+      console.log('selected value', response);
+      console.log('here is the data from the response I got from my post request for translations', response.data);
+      vm.postedBodyPartArray = response.data;
+
+      console.log('pudding and cakes', vm.postedBodyPartArray[0].translation);
    $location.path('/doctorView');
+ });
   };
-
-function getTranslations(){
-  console.log('in getTranslations');
-  $http.get('/translations').then(function(response){
-    console.log('get response:', response);
-    vm.translations = response.data;
-  });
-}
-
-function valuePush(){
-
-}
 
 // Create a function that is called in each button on ng-click,
 // and in the function there will be a post route, sending the value of the button to the server.

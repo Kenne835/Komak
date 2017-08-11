@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngAudio']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAudio', 'checklist-model']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
