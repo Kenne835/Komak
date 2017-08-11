@@ -3,6 +3,7 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
   var vm = this;
   vm.userService = UserService;
   vm.intake = IntakeService.intake;
+  vm.results = IntakeService.results;
 
   vm.bodyClick = function() {
     console.log('onclick function');
@@ -35,11 +36,10 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
     .then(function(response) {
       console.log('selected value', response);
       console.log('here is the data from the response I got from my post request for translations', response.data);
-      vm.postedBodyPartArray = response.data;
+      IntakeService.results.postedBodyPartArray = response.data;
 
-      console.log('pudding and cakes', vm.postedBodyPartArray[0].translation);
-   $location.path('/doctorView');
- });
+      $location.path('/doctorView');
+   });
   };
 
 // Create a function that is called in each button on ng-click,

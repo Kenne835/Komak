@@ -27,12 +27,10 @@ router.post('/', function(req, res) {
       res.sendStatus(500);
     } else {
 
-
       var queryText = 'SELECT * FROM "translations" WHERE "value" LIKE $1 OR "value" LIKE $2 OR "value" LIKE ANY($3::varchar[]) OR "value" LIKE ANY($4::varchar[]);';
       db.query(queryText,
               [postedBodyPart.bodypart, postedBodyPart.limb, postedBodyPart.symptoms, postedBodyPart.comorbidity],
           function(errorMakingQuery, result){
-            //}
             done();
             console.log('here is the result I want', result);
             if(errorMakingQuery) {
