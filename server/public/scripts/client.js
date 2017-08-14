@@ -1,4 +1,11 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngAudio', 'checklist-model']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAudio', 'checklist-model', 'ngMaterial']);
+
+myApp.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('default')
+    //.backgroundPalette('white')
+    .primaryPalette('blue-grey')
+    .accentPalette('blue-grey');
+});
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -69,7 +76,7 @@ myApp.config(function($routeProvider, $locationProvider) {
     })
     .when('/doctorView', {
       templateUrl: '/views/templates/doctorView.html',
-      controller: 'OverviewController as oc',
+      controller: 'ResultController as rc',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();

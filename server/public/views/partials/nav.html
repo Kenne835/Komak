@@ -1,13 +1,17 @@
 <div class="navbar">
   <div class="container">
-    <ul>
-      <li><a href="#/user">User Home</a></li>
-      <li><a href="#/info">Profile</a></li>
-      <li><a href="#/overview">Overview</a></li>
-      <li><a href="#/body">Body</a></li>
-      <li><a href="#/extremities">Extremities</a></li>
-      <li><a href="#/comorbidities">Comorbidities</a></li>
-      <li><a href="#/doctorView">Doctor's View</a></li>
-    </ul>
-  </div>
+    <md-content class="md-padding">
+      <md-nav-bar
+      md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-href="#user" name="page1">User Home</md-nav-item>
+      <!-- <md-nav-item md-nav-href="#info" name="page2">Profile</md-nav-item> -->
+      <md-nav-item md-nav-href="#overview" name="page3">Overview</md-nav-item>
+      <md-nav-item md-nav-href="#body" name="page4">Body</md-nav-item>
+      <md-nav-item md-nav-href="#extremities" name="page5">Extremities</md-nav-item>
+      <md-nav-item md-nav-href="#comorbidities" name="page6">Comorbidities</md-nav-item>
+      <md-nav-item md-nav-href="#doctorView" name="page7">Doctor's View</md-nav-item>
+
+    </md-nav-bar>
+  </md-content>
 </div>

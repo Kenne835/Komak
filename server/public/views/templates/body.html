@@ -1,142 +1,175 @@
 <div ng-include="'views/partials/nav.html'"></div>
+
+<div ng-if="oc.intake.bodypart == 'systemic'">
+
+<center><p><img ng-src="images/Systemic.jpg" height="400"/></p>
+
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Symptoms.m4a">لارښوونې</button></p>
+
+<md-button class="md-raised" ng-audio="soundclips/Fever-Chills-Sweats.m4a">څيرول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="fever"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Unbalanced.m4a">نېش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="inbalanced"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Rapid Weight Loss.m4a">سوزش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="weight-loss"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Rapid Weight Gain.m4a">زخم </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="weight-gain"></md-checkbox><br>
+<!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
+<p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
+</div>
+
 <div ng-if="oc.intake.bodypart == 'arm'"> <!-- if something in the service is equal to "arm" -->
 
-  <center><p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+  <center><p><md-button class="md-raised md-primary" ng-audio="soundclips/Overview.m4a">لارښوونې</md-åbutton></p>
 
-  <p><img ng-src="images/Arm.png" height="300"/></p>
-    <button ng-audio="soundclips/Burn.m4a">لاس </button>
+  <p><img ng-src="images/Arm.jpg" height="400"/></p>
+    <md-button class="md-raised" ng-audio="soundclips/Arm.m4a">لاس </md-button>
     <input type="radio" name="arm" ng-model="oc.intake.limb" value="upperArm"> .۱<br>
-    <button ng-audio="soundclips/Burn.m4a">سانګاله</button>
+    <md-button class="md-raised" ng-audio="soundclips/Elbow.m4a">سانګاله</md-button>
     <input type="radio" name="arm" ng-model="oc.intake.limb" value="elbow"> .۲<br>
-    <button ng-audio="soundclips/Burn.m4a">فورارم </button>
+    <md-button class="md-raised" ng-audio="soundclips/Forearm.m4a">فورارم </md-button>
     <input type="radio" name="arm" ng-model="oc.intake.limb" value="forearm"> .۳<br>
-    <button ng-audio="soundclips/Burn.m4a">لاس</button>
+    <md-button class="md-raised" ng-audio="soundclips/Hand.m4a">لاس</md-button>
     <input type="radio" name="arm" ng-model="oc.intake.limb" value="hand"> .۴<br>
-    <p><button ng-click="oc.extremityClick()">راتلونکی</a></button></p>
+    <p><md-button class="md-raised md-primary" ng-click="oc.extremityClick()">راتلونکی</a></md-button></p>
 
   </center>
 </div>
 
 <div ng-if="oc.intake.bodypart == 'leg'">
 
-  <center><p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+  <center><p><md-button class="md-raised md-primary" ng-audio="soundclips/Overview.m4a">لارښوونې</md-button></p>
 
-  <p><img ng-src="images/Leg.png" height="300"/></p>
-    <button ng-audio="soundclips/Burn.m4a">پاتون </button>
+  <p><img ng-src="images/Leg.jpg" height="400"/></p>
+    <md-button class="md-raised" ng-audio="soundclips/Thigh.m4a">پاتون </md-button>
     <input type="radio" name="leg" ng-model="oc.intake.limb" value="thigh"> .۱<br>
-    <button ng-audio="soundclips/Burn.m4a">زنګون </button>
+    <md-button class="md-raised" ng-audio="soundclips/Knee.m4a">زنګون </md-button>
     <input type="radio" name="leg" ng-model="oc.intake.limb" value="knee"> .۲<br>
-    <button ng-audio="soundclips/Burn.m4a">ناراخ پښه </button>
+    <md-button class="md-raised" ng-audio="soundclips/Shin.m4a">ناراخ پښه </md-button>
     <input type="radio" name="leg" ng-model="oc.intake.limb" value="shin"> .۳<br>
-    <button ng-audio="soundclips/Burn.m4a">پښه </button>
+    <md-button class="md-raised" ng-audio="soundclips/Foot.m4a">پښه </md-button>
     <input type="radio" name="leg" ng-model="oc.intake.limb" value="foot"> .۴<br>
-    <p><button ng-click="oc.extremityClick()">راتلونکی</a></button></p>
+    <p><md-button class="md-raised md-primary" ng-click="oc.extremityClick()">راتلونکی</a></md-button></p>
 
   </center>
 </div>
 
 <div ng-if="oc.intake.bodypart == 'head'">
 
-<center><p><img ng-src="images/Head.png" height="300"/></p>
+<center><p><img ng-src="images/Head.jpg" height="400"/></p>
 
 <br>
 
-<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Symptoms.m4a">لارښوونې</md-button></p>
 
-<button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
-<label><input type="checkbox" checklist-model="oc.intake.symptoms" value="aching-pain"></label><br>
-<button ng-audio="soundclips/Stabbing Pain.m4a">نېش </button>
-<label><input type="checkbox" checklist-model="oc.intake.symptoms" value="stabbing-pain"></label><br>
-<button ng-audio="soundclips/Burning Pain.m4a">سوزش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burning-pain"><br>
-<button ng-audio="soundclips/Laceration.m4a">زخم </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="laceration"><br>
-<button ng-audio="soundclips/Burn.m4a">لمېسل </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burn"><br>
-<button ng-audio="soundclips/Unconscious.m4a">بې خبر </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="unconscious"><br>
-<button ng-audio="soundclips/Confusion.m4a">بېځايه کول </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="confusion"><br>
-<button ng-audio="soundclips/Loss of Vision.m4a">ړوند </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="lack-of-vision"><br>
-<button ng-audio="soundclips/Head Trauma.m4a">پرهار </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="head-trauma"><br>
-<!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
-<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
+<md-button class="md-raised" ng-audio="soundclips/Aching Pain.m4a">څيرول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="aching-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Stabbing Pain.m4a">نېش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="stabbing-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burning Pain.m4a">سوزش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burning-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Laceration.m4a">زخم </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="laceration"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burn.m4a">لمېسل </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burn"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Unconscious.m4a">بې خبر </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="unconscious"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Confusion.m4a">بېځايه کول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="confusion"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Loss of Vision.m4a">ړوند </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="lack-of-vision"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Head Trauma.m4a">پرهار </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="head-trauma"></md-checkbox><br>
+<md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button>
 
 </center>
 </div>
 
 <div ng-if="oc.intake.bodypart == 'chest'">
 
-<center><p><img ng-src="images/Torso.png" height="300"/></p>
+<center><p><img ng-src="images/Chest.jpg" height="400"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Symptoms.m4a">لارښوونې</md-button></p>
 
-<button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="aching-pain"><br>
-<button ng-audio="soundclips/Stabbing Pain.m4a">نېش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="stabbing-pain"><br>
-<button ng-audio="soundclips/Burning Pain.m4a">سوزش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burning-pain"><br>
-<button ng-audio="soundclips/Laceration.m4a">زخم </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="laceration"><br>
-<button ng-audio="soundclips/Burn.m4a">لمېسل </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burn"><br>
-<button ng-audio="soundclips/Shortness of Breath.m4a">سا نيولى </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="breathless"><br>
-<button ng-audio="soundclips/Heart Palpitations.m4a">رېږده </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="palpitations"><br>
+<md-button class="md-raised" ng-audio="soundclips/Aching Pain.m4a">څيرول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="aching-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Stabbing Pain.m4a">نېش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="stabbing-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burning Pain.m4a">سوزش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burning-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Laceration.m4a">زخم </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="laceration"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burn.m4a">لمېسل </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burn"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Shortness of Breath.m4a">سا نيولى </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="breathless"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Heart Palpitations.m4a">رېږده </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="palpitations"></md-checkbox><br>
 <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
-<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
+<p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button></p>
 
 </center>
 </div>
 
 <div ng-if="oc.intake.bodypart == 'abdomen'">
 
-<center><p><img ng-src="images/Torso.png" height="300"/></p>
+<center><p><img ng-src="images/Abdomen.jpg" height="400"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Symptoms.m4a">لارښوونې</md-button></p>
 
-<button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="aching-pain"><br>
-<button ng-audio="soundclips/Stabbing Pain.m4a">نېش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="stabbing-pain"><br>
-<button ng-audio="soundclips/Burning Pain.m4a">سوزش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burning-pain"><br>
-<button ng-audio="soundclips/Laceration.m4a">زخم </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="laceration"><br>
-<button ng-audio="soundclips/Burn.m4a">لمېسل </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burn"><br>
-<button ng-audio="soundclips/Incontinence.m4a">بد لمني </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="incontinence"><br>
+<md-button class="md-raised" ng-audio="soundclips/Aching Pain.m4a">څيرول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="aching-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Stabbing Pain.m4a">نېش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="stabbing-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burning Pain.m4a">سوزش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burning-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Laceration.m4a">زخم </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="laceration"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burn.m4a">لمېسل </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burn"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Incontinence.m4a">بد لمني </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="incontinence"></md-checkbox><br>
 <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
-<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
+<p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button></p>
 
 </center>
 </div>
 
 <div ng-if="oc.intake.bodypart == 'back'">
 
-<center><p><img ng-src="images/back.png" height="300"/></p>
+<center><p><img ng-src="images/Back.jpg" height="400"/></p>
 
-<p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Overview.m4a">لارښوونې</button></p>
 
-<button ng-audio="soundclips/Radiating Pain.m4a">پراخول </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="radiating-pain"><br>
-<button ng-audio="soundclips/Aching Pain.m4a">څيرول </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="aching-pain"><br>
-<button ng-audio="soundclips/Stabbing Pain.m4a">نېش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="stabbing-pain"><br>
-<button ng-audio="soundclips/Burning Pain.m4a">سوزش </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burning-pain"><br>
-<button ng-audio="soundclips/Laceration.m4a">زخم </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="laceration"><br>
-<button ng-audio="soundclips/Burn.m4a">لمېسل </button>
-<input type="checkbox" checklist-model="oc.intake.symptoms" value="burn"><br>
+<md-button class="md-raised" ng-audio="soundclips/Upper Back.m4a">لوړ مله</md-button>
+<input type="radio" name="arm" ng-model="oc.intake.limb" value="upperBack"> .۱<br>
+<md-button class="md-raised" ng-audio="soundclips/Lower Back.m4a">ټيټ مله</md-button>
+<input type="radio" name="arm" ng-model="oc.intake.limb" value="lowerBack"> .۲<br>
+<p><md-button class="md-raised md-primary" ng-click="oc.extremityClick()">راتلونکی</a></md-button></p>
+
+</center>
+</div>
+
+<div ng-if="oc.intake.bodypart == 'neck'">
+
+<center><p><img ng-src="images/Neck.jpg" height="400"/></p>
+
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Symptoms.m4a">لارښوونې</md-button></p>
+
+<md-button class="md-raised" ng-audio="soundclips/Radiating Pain.m4a">پراخول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="radiating-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Aching Pain.m4a">څيرول </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="aching-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Stabbing Pain.m4a">نېش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="stabbing-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burning Pain.m4a">سوزش </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burning-pain"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Laceration.m4a">زخم </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="laceration"></md-checkbox><br>
+<md-button class="md-raised" ng-audio="soundclips/Burn.m4a">لمېسل </md-button>
+<md-checkbox checklist-model="oc.intake.symptoms" value="burn"></md-checkbox><br>
 <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
-<p><button ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
+<p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button></p>
 
 </center>
 </div>

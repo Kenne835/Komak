@@ -5,6 +5,10 @@ body, html {
   font-size: 14px;
 }
 
+.jumbotron {
+  background-color: white;
+}
+
 .instructions .container h1 {
   font-size: 50px;
   font-weight: 600;

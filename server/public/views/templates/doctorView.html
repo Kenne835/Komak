@@ -2,14 +2,12 @@
 
 <center><h2>Doctor's View</h2>
 
-<p><button ng-audio="soundclips/Burn.m4a">Instructions</button></p>
-
-<!-- <p>first part of the array{{oc.postedBodyPartArray}}</p> -->
+<p><md-button class="md-raised md-primary" ng-audio="soundclips/Doctor.m4a">لارښوونې</md-button></p>
 
 <div >
-  <p ng-repeat="item in oc.results.postedBodyPartArray">{{item.translation}}</p>
+  <p ng-repeat="item in rc.results.postedBodyPartArray">{{item.translation}}</p>
 </div>
 
-<p><button ng-click="oc.overviewClick()">New Form</a></button></p>
+<p><md-button class="md-raised md-primary" ng-click="rc.overviewClick()">نوی</a></md-button></p>
 
 </center>

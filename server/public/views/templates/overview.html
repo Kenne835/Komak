@@ -1,20 +1,28 @@
 <div ng-include="'views/partials/nav.html'"></div>
-<div class="container">
-  <center><p><img ng-src="images/Human Body.png" height="400"/></p>
+<div md-theme="default" class="container">
+  <center><p><img ng-src="images/Human Body.jpg" height="400"/></p></center>
 
-    <p><button ng-audio="soundclips/Burn.m4a">لارښوونه</button></p>
+  <p><md-button class="md-raised md-primary" ng-audio="soundclips/Overview.m4a">لارښوونې</md-button></p>
 
-    <button ng-audio="soundclips/Burn.m4a">ښي لاس </button>
-    <input type="radio" name="body" ng-model="oc.intake.bodypart" value="arm"> .۱<br>
-    <button ng-audio="soundclips/Burn.m4a">ښي پښه </button>
-    <input type="radio" name="body" ng-model="oc.intake.bodypart" value="leg"> .۳<br>
-    <button ng-audio="soundclips/Burn.m4a">ټټر </button>
-    <input type="radio" name="body" ng-model="oc.intake.bodypart" value="chest"> .۵<br>
-    <button ng-audio="soundclips/Burn.m4a">سر</button>
-    <input type="radio" name="body" ng-model="oc.intake.bodypart" value="head"> .۶<br>
-    <button ng-audio="soundclips/Burn.m4a">نس </button>
-    <input type="radio" name="body" ng-model="oc.intake.bodypart" value="abdomen"> .۷<br>
-    <button ng-audio="soundclips/Burn.m4a">مله </button>
-    <input type="radio" name="body" ng-model="oc.intake.bodypart" value="back"> .۸<br>
-    <p><button ng-click="oc.bodyClick()">راتلونکی</button></p>
-  </div>
+  <md-radio-group ng-model="oc.intake.bodypart">
+
+    <md-button class="md-raised" ng-audio="soundclips/Whole body.m4a">ټول ځان</md-button>
+    <md-radio-button name="body" value="systemic"></md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Leg.m4a">ښي پښه </md-button>
+    <md-radio-button name="body" value="leg">.۱</md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Arm.m4a">ښي لاس </md-button>
+    <md-radio-button name="body" value="arm">.۲</md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Abdomen.m4a">نس </md-button>
+    <md-radio-button name="body" value="abdomen">.۳</md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Chest.m4a">ټټر </md-button>
+    <md-radio-button name="body" value="chest">.۴</md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Head.m4a">سر</md-button>
+    <md-radio-button name="body" value="head">.۵</md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Back.m4a">مله </md-button>
+    <md-radio-button name="body" value="back">.۶</md-radio-button><br>
+    <md-button class="md-raised" ng-audio="soundclips/Neck.m4a">غاړه</md-button>
+    <md-radio-button name="body" value="neck">.۷</md-radio-button><br>
+    <p><md-button class="md-raised md-primary" ng-click="oc.bodyClick()">راتلونکی</md-button></p>
+  </md-radio-group>
+
+</div>
