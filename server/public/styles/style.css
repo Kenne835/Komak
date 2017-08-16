@@ -1,23 +1,26 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  font-size: 14px;
-}
+  font-size: 25px;
+  color: #455A64;
 
-.jumbotron {
-  background-color: white;
 }
+.md-button.md-raised {
+  font-size: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 
+}
 .instructions .container h1 {
   font-size: 50px;
   font-weight: 600;
 }
 
 .instructions {
-  background-color: #white;
+  background-color: white;
   color: #333333;
-  padding: 15px;
   text-align: center;
 }
 
@@ -39,14 +42,6 @@ body, html {
   padding: 10px 0;
 }
 
-.arm {
-  margin-bottom : 10px;
-}
-
-.leg {
-  margin-bottom : 10px;
-}
-
 .message p {
   margin-left: 10px;
 }
@@ -61,12 +56,6 @@ body, html {
 
 .btn-danger{
   margin-left: 10px;
-}
-
-.navbar {
-  background-color: #333333;
-  width: 100%;
-  border-radius: 0px;
 }
 
 ul {
