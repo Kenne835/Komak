@@ -1,14 +1,12 @@
-<div ng-include="'views/partials/nav.html'"></div>
+<center><h1>Intake Results</h1>
 
-<center><h2>Doctor's View</h2>
+  <p><md-button class="md-raised md-primary" ng-audio="soundclips/Doctor.m4a">لارښوونې</md-button></p>
 
-<p><md-button class="md-raised md-primary" ng-audio="soundclips/Doctor.m4a">لارښوونې</md-button></p>
+  <div >
+    <p>My name is {{rc.ted}}</p>
+    <p ng-repeat="item in rc.results.postedBodyPartArray">{{item.translation}}</p>
+  </div>
 
-<div >
-  <p>My name is {{}}</p>
-  <p ng-repeat="item in rc.results.postedBodyPartArray">{{item.translation}}</p>
-</div>
-
-<p><md-button class="md-raised md-primary" ng-click="rc.overviewClick()">نوی</a></md-button></p>
+  <p><md-button class="md-raised md-primary" ng-click="rc.overviewClick()">نوی</a></md-button></p>
 
 </center>

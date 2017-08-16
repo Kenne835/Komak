@@ -18,6 +18,7 @@
   <script src="vendors/angular.audio.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/client.js"></script>
   <script type="text/javascript" src="scripts/controllers/info.controller.js"></script>
+  <script type="text/javascript" src="scripts/controllers/nav.controller.js"></script>
   <script type="text/javascript" src="scripts/controllers/overview.controller.js"></script>
   <script type="text/javascript" src="scripts/controllers/result.controller.js"></script>
   <script type="text/javascript" src="scripts/controllers/login.controller.js"></script>
@@ -26,10 +27,63 @@
   <script type="text/javascript" src="scripts/services/intake.service.js"></script>
 </head>
 
-<body ng-app="myApp">
-  <header ng-include="'/views/partials/header.html'"></header>
 
-  <main ng-view></main>
+<!--Side Nav Begins here -->
+<body ng-app="myApp" layout="column" style="height:700px">
+  <md-toolbar id="navbar" class="md-warn" style="height:100%" ng-controller="NavController as nc">
+    <div class="md-toolbar-tools" layout="row">
+      <md-button id="menuBtn" layout-align="start center" aria-label="Open sidenav" ng-click="nc.userService.toggleLeft()" ng-disabled="false">
+      Menu
+      </md-button>
+      <div flex layout="row" layout-align="end center">
+        <md-button aria-label="Logo" ng-click="nc.userService.toggleLeft()" class="md-icon-button" ng-disabled="false">
+        </md-button>
+      </div>
 
+
+      <div layout="column" ng-cloak>
+        <!-- <section layout="row" flex> -->
+          <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+          md-disable-backdrop md-whiteframe="4">
+          <md-toolbar class="md-primary"> <h1 class="md-toolbar-tools">{{nc.userService.userObject.userName}}'s Account</h1>
+          </md-toolbar>
+         <center><img ng-src="images/Logo.png" height="300"/></center>
+          <md-content layout-margin layout-align="center">
+            <div flex layout="column" layout-margin layout-align="stretch start">
+              <!-- If user is not logged in the disable Dashboard and Profile -->
+              <div layout="row" flex="100">
+                <md-button md-colors="{color:'primary'}" flex class="md-raised md-warn" ng-click="nc.userService.toggleLeft()"> <a href="#/user">User Home </a></md-button>
+              </div>
+              <div layout="row" flex="100">
+                <md-button md-colors="{color:'primary'}" flex class="md-raised md-warn" ng-click="nc.userService.toggleLeft()"> <a href="#/overview">Intake Form</a> </md-button>
+              </div>
+              <div layout="row" flex="100">
+                <md-button flex layout-align="end bottom" ng-click="nc.userService.toggleLeft()" class="md-primary md-raised">Close</md-button>
+              </div>
+            </div>
+          </md-content>
+
+
+        </md-sidenav>
+      <!-- </section> -->
+    </div>
+  </div>
+
+
+
+  <!-- Container #2 -->
+  <div flex layout="column">
+
+    <!-- Container #3 -->
+    <!-- <md-content> -->
+
+      <main ng-view></main>
+
+
+    <!-- </md-content> -->
+
+  </div>
+
+</md-toolbar>
 </body>
 </html>

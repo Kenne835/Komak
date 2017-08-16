@@ -1,18 +1,45 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-size: 25px;
+  font-size: 35px;
   color: #455A64;
+  font-family: 'Noto Kufi Arabic';
 
 }
+
+#menuBtn {
+  color: #455A64;
+  font-size: 35px;
+}
+
+.md-default-theme {
+  color: #455A64;
+  font-size: 35px;
+}
+
+h1 {
+  color: #455A64;
+  font-size: 50px;
+}
+
+.ng-binding {
+    color: #455A64;
+    font-size: 40px;
+}
+
 .md-button.md-raised {
   font-size: 30px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
 }
+
+#navbar {
+  background-color: white;
+}
+
 .instructions .container h1 {
   font-size: 50px;
   font-weight: 600;
@@ -20,7 +47,7 @@ body, html {
 
 .instructions {
   background-color: white;
-  color: #333333;
+  color: #455A64;
   text-align: center;
 }
 
@@ -71,7 +98,7 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: #455A64;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -80,5 +107,5 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   text-decoration: underline;
-  color: #eee;
+  color: #455A64;
 }

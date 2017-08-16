@@ -20,8 +20,10 @@ router.get('/', function(req, res) {
     // send back user object from database
     console.log('logged in', req.user);
     var userInfo = {
+      name: req.user.name,
       username : req.user.username
     };
+    console.log('this is the req.user', req.user);
     res.send(userInfo);
   } else {
     // failure best handled on the server. do redirect here.
