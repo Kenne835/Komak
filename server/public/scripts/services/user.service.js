@@ -17,7 +17,7 @@ myApp.factory('UserService', function($http, $location, $mdSidenav){
     getuser : function(){
       console.log('UserService -- getuser');
       $http.get('/user').then(function(response) {
-        console.log('ted did this -', response.data.name);
+        console.log(response.data.name);
         vm.ted = response.data.name;
         if(response.data.username) {
           // user has a curret session on the server
