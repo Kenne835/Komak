@@ -45,4 +45,13 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
    });
   };
 
+  vm.translation = {
+  email: ''
+};
+    vm.emailUser = function(translation) {
+      $http.post('/nodemailer', vm.translation).then(function(response) {
+        console.log('object successfully sent to nodemailer router');
+      });
+    };
+
 });

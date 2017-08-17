@@ -12,6 +12,25 @@ body, html {
   font-size: 35px;
 }
 
+.resultCard {
+  background-color: #CFD8DC;
+  margin: 50px;
+}
+
+#results {
+  font-size: 30px;
+}
+
+#email {
+  color: #455A64;
+  font-size: 35px;
+}
+
+#emailResults {
+  color: #455A64;
+  font-size: 35px;
+}
+
 .md-default-theme {
   color: #455A64;
   font-size: 35px;
@@ -19,7 +38,7 @@ body, html {
 
 h1 {
   color: #455A64;
-  font-size: 50px;
+  font-size: 75px;
 }
 
 .ng-binding {
@@ -28,12 +47,11 @@ h1 {
 }
 
 .md-button.md-raised {
-  font-size: 30px;
+  font-size:30px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 10px;
   padding-top: 10px;
-
 }
 
 #navbar {

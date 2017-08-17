@@ -2,11 +2,22 @@
 
   <p><md-button class="md-raised md-primary" ng-audio="soundclips/Doctor.m4a">لارښوونې</md-button></p>
 
-  <div >
-    <p>My name is {{rc.ted}}</p>
-    <p ng-repeat="item in rc.results.postedBodyPartArray">{{item.translation}}</p>
-  </div>
+  <md-card class="resultCard">
+    <p id="results">My name is {{rc.ted}}</p>
+    <p id="results" ng-repeat="item in rc.results.postedBodyPartArray">{{item.translation}}</p>
+  </md-card>
 
-  <p><md-button class="md-raised md-primary" ng-click="rc.overviewClick()">نوی</a></md-button></p>
+  <div id="email">
+    To receive the evaluation results from this intake form, <br>please enter your email address below. <br>
+  </div>
+<div>
+    <md-input>
+      <label id="emailResults">Email:</label>
+      <input ng-model="user.email">
+    </md-input>
+</div>
+  <md-button class="md-raised md-primary" ng-click="rc.emailSuccess()">Send Email</md-button>
+
+  <p><md-button class="md-raised md-primary" ng-click="rc.overviewClick()">نوی</md-button></p>
 
 </center>
