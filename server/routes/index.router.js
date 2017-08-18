@@ -4,8 +4,15 @@ var passport = require('passport');
 var path = require('path');
 var pg = require('pg');
 
-var poolModule = require('../modules/pool.js');
-var pool = poolModule;
+var config = {
+  database: 'Solo_Project',
+  host: 'localhost',
+  port: 5432,
+  max: 10,
+  idleTimeOutMillis: 30000,
+};
+
+var pool = new pg.Pool(config);
 
 // Handles login form POST from index.html
 router.post('/',
