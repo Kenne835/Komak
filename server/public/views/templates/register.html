@@ -3,15 +3,15 @@
   <h1 class="lead">Register User</h1>
   <h1 class="lead alert alert-danger" role="alert" ng-if="lc.message != ''">{{lc.message}}</h2>
   <form ng-submit="lc.registerUser()">
-    <div>
-        <label for="name">First and Last Name:</label>
+    <div id="name">
+        <label for="name">Full Name:</label>
         <input type="name" ng-model="lc.user.name" />
     </div>
-    <div>
+    <div id="username">
         <label for="username">Username:</label>
         <input type="text" ng-model="lc.user.username" />
     </div>
-    <div>
+    <div id="password">
         <label for="password">Password:</label>
         <input type="password" ng-model="lc.user.password" />
     </div>

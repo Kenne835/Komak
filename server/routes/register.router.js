@@ -5,15 +5,8 @@ var pool = require('../modules/pool.js');
 var encryptLib = require('../modules/encryption');
 var pg = require('pg');
 
-var config = {
-  database: 'Solo_Project',
-  host: 'localhost',
-  port: 5432,
-  max: 10,
-  idleTimeOutMillis: 30000,
-};
-
-var pool = new pg.Pool(config);
+var poolModule = require('../modules/pool.js');
+var pool = poolModule;
 
 // Handles request for HTML file
 router.get('/', function(req, res, next) {

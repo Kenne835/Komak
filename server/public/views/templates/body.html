@@ -12,7 +12,6 @@
       <md-checkbox checklist-model="oc.intake.symptoms" value="weight-loss"></md-checkbox><br>
       <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Rapid Weight Gain.m4a">زخم </md-button>
       <md-checkbox checklist-model="oc.intake.symptoms" value="weight-gain"></md-checkbox><br>
-      <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
       <p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></button></p>
       </div>
 
@@ -25,13 +24,13 @@
           <center><p><md-button class="md-raised md-primary" ng-audio="soundclips/Overview.m4a">لارښوونې</md-button></p></center>
 
           <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Arm.m4a">مټه</md-button>
-          <md-radio-button  name="arm" value="upperArm"> .۱</md-radio-button>
+          <md-radio-button  class="armBtn" name="arm" value="upperArm"> .۱</md-radio-button>
           <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Elbow.m4a">سانګاله</md-button>
-          <md-radio-button  name="arm" value="elbow"> .۲</md-radio-button>
+          <md-radio-button  class="armBtn" name="arm" value="elbow"> .۲</md-radio-button>
           <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Forearm.m4a">فورارم </md-button>
-          <md-radio-button  name="arm" value="forearm"> .۳</md-radio-button>
+          <md-radio-button  class="armBtn" name="arm" value="forearm"> .۳</md-radio-button>
           <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Hand.m4a">لاس</md-button>
-          <md-radio-button  name="arm" value="hand"> .۴</md-radio-button>
+          <md-radio-button  class="armBtn" name="arm" value="hand"> .۴</md-radio-button>
           <p><md-button class="md-raised md-primary" ng-click="oc.extremityClick()">راتلونکی</a></md-button></p>
 
         </md-radio-group>
@@ -46,13 +45,13 @@
           <center><p><md-button class="md-raised md-primary" ng-audio="soundclips/Overview.m4a">لارښوونې</md-button></p>
 
             <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Thigh.m4a">پاتون </md-button>
-            <md-radio-button name="leg" ng-model="oc.intake.limb" value="thigh"> .۱</md-radio-button>
+            <md-radio-button class="legBtn" name="leg" ng-model="oc.intake.limb" value="thigh"> .۱</md-radio-button>
             <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Knee.m4a">زنګون </md-button>
-            <md-radio-button name="leg" ng-model="oc.intake.limb" value="knee"> .۲</md-radio-button>
+            <md-radio-button class="legBtn" name="leg" ng-model="oc.intake.limb" value="knee"> .۲</md-radio-button>
             <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Shin.m4a">نارې پښه </md-button>
-            <md-radio-button name="leg" ng-model="oc.intake.limb" value="shin"> .۳</md-radio-button>
+            <md-radio-button class="legBtn" name="leg" ng-model="oc.intake.limb" value="shin"> .۳</md-radio-button>
             <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Foot.m4a">پښه </md-button>
-            <md-radio-button name="leg" ng-model="oc.intake.limb" value="foot"> .۴</md-radio-button>
+            <md-radio-button class="legBtn" name="leg" ng-model="oc.intake.limb" value="foot"> .۴</md-radio-button>
             <p><md-button class="md-raised md-primary" ng-click="oc.extremityClick()">راتلونکی</a></md-button></p>
 
           </md-radio-group>
@@ -111,7 +110,6 @@
           <md-checkbox checklist-model="oc.intake.symptoms" value="breathless"></md-checkbox><br>
           <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Heart Palpitations.m4a">رېږده </md-button>
           <md-checkbox checklist-model="oc.intake.symptoms" value="palpitations"></md-checkbox><br>
-          <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
           <p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button></p>
 
         </center>
@@ -135,7 +133,6 @@
           <md-checkbox checklist-model="oc.intake.symptoms" value="burn"></md-checkbox><br>
           <md-button class="md-raised md-warm" md-colors="{color:'primary'}" ng-audio="soundclips/Incontinence.m4a">بد لمني </md-button>
           <md-checkbox checklist-model="oc.intake.symptoms" value="incontinence"></md-checkbox><br>
-          <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
           <p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button></p>
 
         </center>
@@ -150,9 +147,9 @@
             <md-radio-group ng-model="oc.intake.limb" layout="column" layout-align="center center">
 
               <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Upper Back.m4a">لوړ مله</md-button>
-              <md-radio-button name="back" ng-model="oc.intake.limb" value="upperBack"> .۱</md-radio-button>
+              <md-radio-button class="backBtn" name="back" ng-model="oc.intake.limb" value="upperBack"> .۱</md-radio-button>
               <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Lower Back.m4a">ټيټ مله</md-button>
-              <md-radio-button name="back" ng-model="oc.intake.limb" value="lowerBack"> .۲</md-radio-button>
+              <md-radio-button class="backBtn" name="back" ng-model="oc.intake.limb" value="lowerBack"> .۲</md-radio-button>
               <p><md-button class="md-raised md-primary" ng-click="oc.extremityClick()">راتلونکی</a></md-button></p>
 
             </md-radio-group>
@@ -177,7 +174,6 @@
               <md-checkbox checklist-model="oc.intake.symptoms" value="laceration"></md-checkbox><br>
               <md-button class="md-raised md-warn" md-colors="{color:'primary'}" ng-audio="soundclips/Burn.m4a">لمېسل </md-button>
               <md-checkbox checklist-model="oc.intake.symptoms" value="burn"></md-checkbox><br>
-              <!-- <p><button><a href="#/overview">زیاتر </a></button></p> -->
               <p><md-button class="md-raised md-primary" ng-click="oc.comorbidityClick()">راتلونکی</a></md-button></p>
 
             </center>

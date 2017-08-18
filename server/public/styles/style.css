@@ -9,16 +9,31 @@ body, html {
 
 #menuBtn {
   color: #455A64;
+  font-size: 50px;
+}
+
+.armBtn {
   font-size: 35px;
+  color: #455A64;
+}
+
+.legBtn {
+  font-size: 35px;
+  color: #455A64;
+}
+
+.backBtn {
+  font-size: 35px;
+  color: #455A64;
 }
 
 .resultCard {
   background-color: #CFD8DC;
-  margin: 50px;
+  margin: 60px;
 }
 
 #results {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 #email {
@@ -42,20 +57,26 @@ h1 {
 }
 
 .ng-binding {
-    color: #455A64;
-    font-size: 40px;
+  color: #455A64;
+  font-size: 40px;
 }
 
 .md-button.md-raised {
-  font-size:30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  font-size:40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 #navbar {
   background-color: white;
+}
+
+#password, #name, #username {
+  font-size: 50px;
+  color: #455A64;
+  font-family: 'Noto Kufi Arabic';
 }
 
 .instructions .container h1 {
@@ -76,54 +97,4 @@ h1 {
 #container {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.container p{
-  margin-top : 14px;
-  margin-bottom : 14px;
-}
-
-.message {
-  padding: 10px 0;
-}
-
-.message p {
-  margin-left: 10px;
-}
-
-.message:nth-child(odd) {
-   background-color: #eeeeee;
-}
-
-.message:nth-child(even) {
-  background-color: #f8f8f8;
-}
-
-.btn-danger{
-  margin-left: 10px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #455A64;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  text-decoration: underline;
-  color: #455A64;
 }

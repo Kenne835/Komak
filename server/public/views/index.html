@@ -3,7 +3,7 @@
 <head>
   <title>Solo Project</title>
   <link rel="stylesheet" href="styles/style.css">
-  <link href="vendors/sweetalert.css" rel="stylesheet" type="text/css">
+  <link href="vendors/sweetalert2.min.css" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
   <script type="text/javascript" src="vendors/angular-route/angular-route.min.js"></script>
@@ -27,8 +27,8 @@
   <script type="text/javascript" src="scripts/controllers/user.controller.js"></script>
   <script type="text/javascript" src="scripts/services/user.service.js"></script>
   <script type="text/javascript" src="scripts/services/intake.service.js"></script>
-  <script type="text/javascript" src="vendors/sweetalert.min.js"></script>
-  
+  <script type="text/javascript" src="vendors/sweetalert2.min.js"></script>
+
 </head>
 
 
@@ -56,10 +56,10 @@
           <div flex layout="column" layout-margin layout-align="stretch start">
             <!-- If user is not logged in the disable Dashboard and Profile -->
             <div layout="row" flex="100">
-              <md-button md-colors="{color:'primary'}" flex class="md-raised md-warn" ng-click="nc.userService.toggleLeft()"> <a href="#/user">User Home </a></md-button>
+              <md-button md-colors="{color:'primary'}" flex class="md-raised md-warn" ng-click="nc.userService.toggleLeft()"> <a href="#/user">Profile</a></md-button>
             </div>
             <div layout="row" flex="100">
-              <md-button md-colors="{color:'primary'}" flex class="md-raised md-warn" ng-click="nc.userService.toggleLeft()"> <a href="#/overview">Intake Form</a> </md-button>
+              <md-button md-colors="{color:'primary'}" flex class="md-raised md-warn" ng-click="nc.userService.toggleLeft()"> <a href="#/overview">Intake</a> </md-button>
             </div>
             <div layout="row" flex="100">
               <md-button flex layout-align="end bottom" ng-click="nc.userService.toggleLeft()" class="md-primary md-raised">Close</md-button>
