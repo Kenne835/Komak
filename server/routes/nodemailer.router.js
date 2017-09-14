@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
     from: 'komakmedapp@gmail.com',
     to: req.body.email.email,
     subject: 'You have received an email from Komak: a MedApp for Afghans',
-    text: 'An intake form has been filled out by a patient. The evaluation has been translated from Pashto into English and you may see the results below: ' + 'My name is ' + req.body.name + '. ' + string
+    text: 'An intake form has been filled out by a patient. The evaluation has been translated from Pashto into English and you may see the results here: ' + 'My name is ' + req.body.name + '. ' + string
   };
 
   transporter.sendMail(mailOptions, function(error, info){

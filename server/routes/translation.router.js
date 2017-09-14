@@ -5,7 +5,7 @@ var path = require('path');
 var pg = require('pg');
 
 var config = {
-  database: 'Solo_Project',
+  database: 'Solo_Project', 
   host: 'localhost',
   port: 5432,
   max: 10,

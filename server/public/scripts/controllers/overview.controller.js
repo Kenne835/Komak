@@ -2,7 +2,7 @@ myApp.controller('OverviewController', function(UserService, IntakeService, $loc
   console.log('OverviewController created');
   var vm = this;
   vm.userService = UserService;
-  vm.intake = IntakeService.intake;
+  vm.intake = IntakeService.intake; 
   vm.results = IntakeService.results;
   vm.reset = IntakeService.reset;
 
