@@ -3,8 +3,8 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var path = require('path');
-var username = require('../config.js').username;
-var password = require('../config.js').password;
+var username = process.env.USERNAME || require('../config.js').username;
+var password = process.env.PASSWORD || require('../config.js').password;
 
 
 router.post('/', function(req, res, next) {
