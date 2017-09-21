@@ -3,16 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var path = require('path');
 var pg = require('pg');
-
-var config = {
-  database: 'Solo_Project',
-  host: 'localhost',
-  port: 5432,
-  max: 10,
-  idleTimeOutMillis: 30000,
-};
-
-var pool = new pg.Pool(config);
+var pool = require('../modules/pool.js');
 
 // Handles login form POST from index.html
 router.post('/',

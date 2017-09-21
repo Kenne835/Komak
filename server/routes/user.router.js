@@ -1,16 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
-
-var config = {
-  database: 'Solo_Project',
-  host: 'localhost',
-  port: 5432,
-  max: 10,
-  idleTimeOutMillis: 30000,
-};
-
-var pool = new pg.Pool(config);
+var pool = require('../modules/pool.js');
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {

@@ -4,15 +4,6 @@ var encryptLib = require('../modules/encryption');
 var pool = require('../modules/pool.js');
 var pg = require('pg');
 
-var config = {
-  database: 'Solo_Project',
-  host: 'localhost',
-  port: 5432,
-  max: 10,
-  idleTimeOutMillis: 30000,
-};
-
-var pool = new pg.Pool(config);
 
 
 passport.serializeUser(function(user, done) {
